@@ -54,3 +54,10 @@ function doTranslation(textToTranlsate, languageId) {
 
 }
 getLanguages();
+
+//   var input = document.getElementById("movieText");
+// input.addEventListener("keypress", function(event) {
+//     if (event.key === "Enter") {
+//         alert('Working');
+//     }
+// });

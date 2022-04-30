@@ -10,11 +10,13 @@ var multipage=false;
 var movieTitle="";
 var movieOverview="";
 
+//var searchText = document.querySelector("#movieText");
+var input = document.getElementById("movieText");
+// var searchButton = document.querySelector("#search-btn");
+var movieToTranslateText = document.querySelector("#movieDetails");
 
 
-
-
-function getMovieByName(movieName, pageNumber) {
+async function getMovieByName(movieName, pageNumber) {
     
     // if(firstPass)
     var movieGetUrl = "https://api.themoviedb.org/3/search/movie?query=" + movieName + "&api_key=5282afd0a67826fac3febca5930766eb&page=" + pageNumber;
@@ -22,7 +24,7 @@ function getMovieByName(movieName, pageNumber) {
     //store the current search term in local storage
     //localStorage.setItem("movieName", movieName);
     //get the movie data from the api
-    fetch(movieGetUrl, {
+    await fetch(movieGetUrl, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -57,7 +59,39 @@ function getMovieByName(movieName, pageNumber) {
 }
 
 
+const onSearchMovie = () => {
+    console.log (`Searching for Movie: ${input.value}`);
+    getMovieByName(input.value, 1)
 
+    .then(function () {
+
+        console.log(movies);
+        movieToTranslateText.innerHTML = movies[0].title + ": " + movies[0].overview;
+    })
+}
+
+//searchButton.addEventListener("click", onSearchMovie)
+
+
+input.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        onSearchMovie();
+    }
+});
+
+
+
+
+
+// searchButton.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     movieName = searchText.value;
+//     movies = [];
+//     getMovieByName(movieName, 1);
+//     movieToTranslateText.innerHTML = movies[1].title + ": " + movies[1].overview;
+
+
+// });
 
 
 
@@ -70,5 +104,5 @@ function getMovieByName(movieName, pageNumber) {
 // }
 
 
-getMovieByName(movieName, "1");
-console.log(movies);
+//getMovieByName(movieName, "1");
+//console.log(movies);

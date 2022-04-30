@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +7,22 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-
 <body>
-    <div class="grid-container">
-        <div id="grid-item1" class="grid-item">
-            <label id="label1"><h4><p>Enter movie title below</p></h4></label>
-            <select id="toLanguage" name="language" id="Language">
-            <option id="toLanguage" value="#">Select Launguage</option>
+
+<div class="grid-container">
+    
+<div id="textArea1" class="grid-item"><textarea id="movieText" class="textArea">Enter movie title here, choose language you wish to translate into then press enter.</textarea></div>
+    
+    <div id="grid-item1" class="grid-item">
+
+        <label id="label">Select Launguage</label>
+        <select id="toLanguage" name="language"></select>
+
+        
+
+        
+            
+            <option value="#"></option>
             <!--
             <option value="Afrikaans">Afrikaans</option>
             <option value="English">English</option>
@@ -26,22 +34,33 @@
             <option value="Spanish">Spanish</option>
             <option value="Swahili">Swahili</option>
             -->
+            
+            
+            
+        
         </select>
-        </div>
-        <div id="grid-item2" class="grid-item">
-            <h4>
-                <p>Translated Movie Title & Description</p>
-            </h4>
-        </div>
-        <div class="grid-item"><textarea class="textArea"></textarea></div>
-        <div class="grid-item"><textarea class="textArea"></textarea></div>
     </div>
-    <div class="movie-poster-container">
-        <div class="movie-poster"></div>
-    </div>
-    <script src="./assets/scripts/script.js"></script>
-    <script src="./assets/scripts/translate.js">
-    </script>
+
+    
+    
+
+    <div id="movieDetails" class="grid-item"><textarea class="textArea">English Movie description will be displayed here.</textarea></div>
+    <div id="movieTranslation" class="grid-item"><textarea class="textArea">Translated movie title and description will be displayed here.</textarea></div>
+</div>
+</div>
+
+<div class="movie-poster-container">
+    <div class="movie-poster"></div>
+
+</div>
+
+
+<script src="./assets/scripts/script.js"></script>
+<script src="./assets/scripts/translate.js"></script>
 </body>
 
+
 </html>
+
+
+
