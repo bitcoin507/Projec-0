@@ -37,7 +37,7 @@
     padding: auto;
 }
 
-#label{
+label{
     position: absolute;
     left: 10px;
     font-family: serif;
@@ -95,7 +95,5 @@ body {
 }
 
 .movie-poster-container {
-    background-image:url(./images/question-mark-background-vector-18432940.jpg) ;
+    background-image:url(./images/question-mark-background-vector-18432940.webp) ;
 }
-
-

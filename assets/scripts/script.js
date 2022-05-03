@@ -9,11 +9,13 @@ var movies = [];
 var multipage=false;
 var movieTitle="";
 var movieOverview="";
+var posterUrl="https://image.tmdb.org/t/p/w500";
 
 //var searchText = document.querySelector("#movieText");
 var input = document.getElementById("movieText");
 // var searchButton = document.querySelector("#search-btn");
 var movieToTranslateText = document.querySelector("#movieDetails");
+var moviePosterContainer=document.getElementById("moviePosterContainer")
 
 
 async function getMovieByName(movieName, pageNumber) {
@@ -44,6 +46,7 @@ async function getMovieByName(movieName, pageNumber) {
                 id: data.results[i].id,
                 title: data.results[i].title,
                 overview: data.results[i].overview,
+                poster_path: posterUrl + data.results[i].poster_path,
             }
             movies.push(movie);
         }
@@ -60,6 +63,7 @@ async function getMovieByName(movieName, pageNumber) {
 
 
 const onSearchMovie = () => {
+    movies.length=0;
     console.log (`Searching for Movie: ${input.value}`);
     getMovieByName(input.value, 1)
 
@@ -67,6 +71,10 @@ const onSearchMovie = () => {
 
         console.log(movies);
         movieToTranslateText.innerHTML = movies[0].title + ": " + movies[0].overview;
+        moviePosterContainer.style.backgroundImage = "url(" + movies[0].poster_path + ")";
+        moviePosterContainer.style.width = "500px";
+        moviePosterContainer.style.height = "800px";
+        //moviePosterContainer.style.backgroundImage = url(movies[0].poster_path);   //.posterUrl=movies[0].poster_path;
     })
 }
 

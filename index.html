@@ -8,52 +8,48 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-
-<div class="grid-container">
     
-<div id="textArea1" class="grid-item"><textarea id="movieText" class="textArea">Enter movie title here, choose language you wish to translate into then press enter.</textarea></div>
-    
-    <div id="grid-item1" class="grid-item">
-
-        <label id="label">Select Launguage</label>
-        <select id="toLanguage" name="language"></select>
-
+    <div class="grid-container">
         
+        <div id="textArea1" class="grid-item"><textarea id="movieText" class="textArea">Enter movie title here, choose language you wish to translate into then press enter.</textarea></div>
+        
+        <div id="grid-item1" class="grid-item">
+            
+            <label id="label">Select Launguage</label>
+            <select id="toLanguage" name="language">
+            
+            
+            
+            
+            
+            <!-- <option value="#"></option> -->
+            
+                <option value="af">Afrikaans</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
 
-        
-            
-            <option value="#"></option>
-            <!--
-            <option value="Afrikaans">Afrikaans</option>
-            <option value="English">English</option>
-            <option value="French">French</option>
-            <option value="German">German</option>
-            <option value="Hindu">Hindu</option>
-            <option value="Italian">Italian</option>
-            <option value="Portugese">Portugese</option>
-            <option value="Spanish">Spanish</option>
-            <option value="Swahili">Swahili</option>
-            -->
+           
             
             
             
-        
+            
         </select>
     </div>
-
     
     
-
+    
+    
     <div id="movieDetails" class="grid-item"><textarea class="textArea">English Movie description will be displayed here.</textarea></div>
     <div id="movieTranslation" class="grid-item"><textarea class="textArea">Translated movie title and description will be displayed here.</textarea></div>
 </div>
 </div>
 
-<div class="movie-poster-container">
+<div id="moviePosterContainer" class="movie-poster-container">
     <div class="movie-poster"></div>
-
+    
 </div>
 
+<input id="doTranslate" type="button" value="Translate">
 
 <script src="./assets/scripts/script.js"></script>
 <script src="./assets/scripts/translate.js"></script>
