@@ -1,7 +1,7 @@
 # Projec-0
 The aim of this project is to create a website that will allow users to translate the title and synopsis of any movie, from English Language
 to any selected Language. For example,  English to Spanish. This will be possible by using web API and Java Script methods, to fetch data from
-a third party api, and using it as a sourse data in the translation weebsite.
+a third party api, and using it as a source data in the translation weebsite.
 
 The website is designed using VSCode (IDE).
 
