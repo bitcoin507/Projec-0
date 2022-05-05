@@ -58,6 +58,7 @@ async function getMovieByName(movieName, pageNumber) {
         {
             getMovieByName(movieName, currentPage + 1);
         }
+        localStorage.setItem("movies-" + movieName.toLowerCase(), JSON.stringify(movies));
     })
 }
 
@@ -65,6 +66,13 @@ async function getMovieByName(movieName, pageNumber) {
 const onSearchMovie = () => {
     movies.length=0;
     console.log (`Searching for Movie: ${input.value}`);
+    var inputValue=input.value;
+    var searchTerm = "movies-" + inputValue.toLowerCase().trim();
+    var localMovies = JSON.parse(localStorage.getItem(searchTerm));
+    //localStorage.getItem("movies-" + input.value);
+    if(localMovies==null){
+        getMovieByName(input.value, 1);
+    }
     getMovieByName(input.value, 1)
 
     .then(function () {
