@@ -2,6 +2,18 @@
 Our First Team Project
 
 ## Description
+A website that enables movie overview trnaslation from English to other languages.
+
+## Screenshot
+![](/assets/screen.png)
+
+## Instructions
+
+Enter a movie name in the top left box and press retrun/enter.  This will produce a movie synopsis in the bottom left box.  It will also show a poster image of the movie.
+
+Choose a language from the top right box.  
+
+Press the Translate button.  This will translate the movie synopsis to the chosen language and display it in the bottom right box.
 
 ## API's
 
