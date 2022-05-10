@@ -1,4 +1,4 @@
-# Projec-0
+# Project-0
 Our First Team Project
 
 ## Description
