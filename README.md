@@ -19,9 +19,6 @@ How to launch project
     Copy link to you favorite web browser and launch.
 =======
 
-## Description
-A website that enables movie overview trnaslation from English to other languages.
-
 ## Screenshot
 ![](/assets/screen.png)
 
