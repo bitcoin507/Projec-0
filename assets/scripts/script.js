@@ -26,6 +26,7 @@ async function getMovieByName(movieName, pageNumber) {
     //store the current search term in local storage
     //localStorage.setItem("movieName", movieName);
     //get the movie data from the api
+    console.log(movieGetUrl);
     await fetch(movieGetUrl, {
         method: 'GET',
         headers: {
