@@ -18,9 +18,6 @@ How to launch project
     This website can be accessed using any web browser like safari and google chrome.
     Copy link to you favorite web browser and launch.
 =======
-# Project-0
-Our First Team Project
->>>>>>> 5c326d2669ad414158357ce7ea8376e8d734519b
 
 ## Description
 A website that enables movie overview trnaslation from English to other languages.
